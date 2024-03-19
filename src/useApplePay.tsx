@@ -55,6 +55,7 @@ export const useApplePay = (priceToPay: string): [() => void, any] => {
       }
     };
   };
+
   const handleOnApplePay = useCallback(async () => {
     if (canMakeApplePayments && priceToPay) {
       const merchantSession = new appleSession(3, paymentRequest());
